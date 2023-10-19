@@ -9,6 +9,7 @@ class ContactAdmin(admin.ModelAdmin):
         'first_name',
         'last_name',
         'phone',
+        'show',
     )
     ordering = 'id',
     search_fields = ('id', 'first_name', 'last_name')
@@ -16,7 +17,7 @@ class ContactAdmin(admin.ModelAdmin):
     list_per_page = 20
     list_max_show_all = 200
     list_display_links = ('id', 'phone')
-    # list_editable = ('first_name', 'last_name')
+    list_editable = ('first_name', 'last_name', 'show')
 
 
 @admin.register(models.Category)
